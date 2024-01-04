@@ -2,7 +2,7 @@ function onFormSubmit(event) {
 
     record_array = []
   
-    var form = FormApp.openById('1pJskZSLLbQk0m4MyzAMHzyacw0D3MaJDgkYKwfGiTOs'); // Form ID
+    var form = FormApp.openById('1FAIpQLSe0nXVbff-NGcN41ojJCQFen8nwNpB3UxCtrI_KVuzMCCAnwg'); // Form ID
     var formResponses = form.getResponses();
     var formCount = formResponses.length;
   
@@ -25,7 +25,7 @@ function onFormSubmit(event) {
   }
   
   function AddRecord(nama, jenis_kelamin, tanggal_lahir, alamat) {
-    var url = 'https://docs.google.com/spreadsheets/d/1owYJ6s-taiWAJok3d5WyO3CFfCLdJKqkmVeYingjasg/edit#gid=0';
+    var url = 'https://docs.google.com/spreadsheets/d/1cm-SFi4D7wNhtYxqNnZe5atiQ5dHzX9DSnvCsgEevfM/edit?usp=sharing';
     var ss= SpreadsheetApp.openByUrl(url);
     var dataSheet = ss.getSheetByName("Sheet1");
     dataSheet.appendRow([nama, jenis_kelamin, tanggal_lahir, alamat, new Date()]);
